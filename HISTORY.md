@@ -1,5 +1,83 @@
 # React-Select
 
+## v0.6.11 / 2015-09-28
+
+* added; `isLoading` prop, allows indication of async options loading in situations where more control is required, thanks [Jon Gautsch](https://github.com/jgautsch)
+
+## v0.6.10 / 2015-09-24
+
+* fixed; a build issue with the previous release that prevented the stylesheet being generated / included
+* fixed; a LESS syntax issue, thanks [Bob Cardenas](https://github.com/bcardi)
+
+## v0.6.9 / 2015-09-19
+
+* added; `style` key for package.json, thanks [Stephen Wan](https://github.com/stephen)
+* added; `onInputChange` handler that returns the current input value, thanks [Tom Leslie](https://github.com/lomteslie)
+* fixed; simplifying handleKey function & preventDefault behaviour, thanks [davidpene](https://github.com/davidpene)
+* fixed; Display spinner while auto-loading initial data, thanks [Ben Jenkinson](https://github.com/BenJenkinson)
+* fixed; better support for touch events, thanks [Montlouis-Calixte Stéphane](https://github.com/bulby97)
+* fixed; prevent value splitting on non-multi-value select, thanks [Alan R. Soares](https://github.com/alanrsoares)
+
+## v0.6.8 / 2015-09-16
+
+* fixed; broader range of allowed prereleases for React 0.14, including rc1
+* fixed; preventing backspace from navigating back in the browser history, thanks [davidpene](https://github.com/davidpene)
+
+## v0.6.7 / 2015-08-28
+
+* fixed; missing styles for `.Select-search-prompt` and `.Select-searching` issues, thanks [Jaak Erisalu](https://github.com/jaakerisalu) and [davidpene](https://github.com/davidpene)
+
+## v0.6.6 / 2015-08-26
+
+* fixed; issue in Chrome where clicking the scrollbar would close the menu, thanks [Vladimir Matsola](https://github.com/vomchik)
+
+## v0.6.5 / 2015-08-24
+
+* fixed; completely ignores clicks on disabled items, unless the target of the click is a link, thanks [Ben Stahl](https://github.com/bhstahl)
+
+## v0.6.4 / 2015-08-24
+
+This release includes a huge improvement to the examples / website thanks to @jossmac. Also:
+
+* added; support for React 0.14 beta3
+* fixed; disabled options after searching, thanks @bruderstein
+* added; support for "Searching..." text (w/ prop) while loading async results, thanks @bruderstein and @johnomalley
+* added; `className`, `style` and `title` keys are now supported in option properties, thanks @bruderstein
+
+## v0.6.3 / 2015-08-18
+
+Otherwise known as "the real 0.6.2" this includes the updated build for the last version; sorry about that!
+
+## v0.6.2 / 2015-08-13
+
+* changed; if the `searchable` prop is `false`, the menu is opened _or closed_ on click, more like a standard Select input. thanks [MaaikeB](https://github.com/MaaikeB)
+
+## v0.6.1 / 2015-08-09
+
+* added; Support for options with numeric values, thanks [Dave Brotherstone](https://github.com/bruderstein)
+* changed; Disabled options now appear in the search results , thanks [Dave Brotherstone](https://github.com/bruderstein)
+* fixed; asyncOptions are reloaded on componentWillReceiveProps when the value has changed, thanks [Francis Cote](https://github.com/drfeelgoud)
+* added; `cacheAsyncResults` prop (default `true`) now controls whether the internal cache is used for `asyncOptions`
+
+## v0.6.0 / 2015-08-05
+
+* improved; option, value and single value have been split out into their own components, and can be customised with props. see [#328](https://github.com/JedWatson/react-select/pull/328) for more details.
+* improved; Near-complete test coverage thanks to the awesome work of [Dave Brotherstone](https://github.com/bruderstein)
+* improved; Support all alpha/beta/rc's of React 0.14.0, thanks [Sébastien Lorber](https://github.com/slorber)
+* fixed; Close multi-select menu when tabbing away, thanks [Ben Alpert](https://github.com/spicyj)
+* fixed; Bug where Select shows the value instead of the label (reapplying fix)
+* fixed; `valueRenderer` now works when `multi={false}`, thanks [Chris Portela](https://github.com/0xCMP)
+* added; New property `backspaceRemoves` (default `true`), allows the default behaviour of removing values with backspace when `multi={true}`, thanks [Leo Lehikoinen](https://github.com/lehikol2)
+
+## v0.5.6 / 2015-07-27
+
+* fixed; Allow entering of commas when allowCreate is on but multi is off, thanks [Angelo DiNardi](https://github.com/adinardi)
+* fixed; Times (clear) character is now rendered from string unicode character for consistent output, thanks [Nibbles](https://github.com/Siliconrob)
+* fixed; allowCreate bug, thanks [goodzsq](https://github.com/goodzsq)
+* fixed; changes to props.placeholder weren't being reflected correctly, thanks [alesn](https://github.com/alesn)
+* fixed; error when escape is pressedn where `clearValue` was not passed the event, thanks [Mikhail Kotelnikov](https://github.com/mkotelnikov)
+* added; More tests, thanks [Dave Brotherstone](https://github.com/bruderstein)
+
 ## v0.5.5 / 2015-07-12
 
 * fixed; replaced usage of `component.getDOMNode()` with `React.findDOMNode(component)` for compatibility with React 0.14

@@ -20,7 +20,6 @@
   cursor: default;
   outline: none;
   padding: 8px 52px 8px 10px;
-  transition: all 200ms ease;
 }
 .Select-control:hover {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
@@ -58,6 +57,21 @@
   white-space: nowrap;
 }
 .has-value > .Select-control > .Select-placeholder {
+  color: #333333;
+}
+.Select-value {
+  color: #aaaaaa;
+  padding: 8px 52px 8px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -15px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.has-value > .Select-control > .Select-value {
   color: #333333;
 }
 .Select-input > input {
@@ -179,7 +193,9 @@
   color: #cccccc;
   cursor: not-allowed;
 }
-.Select-noresults {
+.Select-noresults,
+.Select-search-prompt,
+.Select-searching {
   box-sizing: border-box;
   color: #999999;
   cursor: default;
